@@ -1,0 +1,536 @@
+/* ==========================================================================
+   VARIÁVEIS E RESET
+   ========================================================================== */
+:root {
+    --bg-white: #FFFFFF;
+    --color-1: #D6C7B8; /* Areia */
+    --color-2: #D5AE99; /* Salmão Suave */
+    --color-3: #B2948B; /* Rosé Terroso */
+    --color-4: #8A5B59; /* Terracota */
+    --color-5: #6D4035; /* Marrom Médio */
+    --color-6: #311418; /* Vinho Profundo */
+    --text-dark: #2A1B18;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--color-6);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-header {
+    background-color: rgba(255, 255, 255, 0.95); /* Branco com leve transparência */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco para sofisticação */
+    padding: 15px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade ao rolar */
+    
+    /* O SEGREDO ESTÁ AQUI: */
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; /* Garante que ele fique por cima de todos os outros elementos */
+    
+    transition: padding 0.3s ease; /* Para um efeito suave se quiser diminuir ao rolar */
+}
+
+/* Ajuste opcional: quando o mouse passa no link do menu */
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-5);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between; /* Empurra a logo para a esquerda e o menu para a direita */
+    align-items: center;
+    max-width: 1400px; /* Aumentamos o limite de largura para permitir mais afastamento */
+    margin: 0 auto;
+    padding: 0 50px; /* Aumenta o recuo das bordas laterais da tela */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 40px; /* Garante que nada chegue perto da logo pelo lado direito */
+    flex-shrink: 0; /* Impede que a logo seja espremida em telas menores */
+}
+
+.logo-text {
+    font-size: 1.6rem; /* Deixa o nome do projeto um pouco mais imponente */
+    white-space: nowrap; /* Impede que o nome quebre em duas linhas */
+    color: var(--color-6); /* Sua cor Vinho Profundo #311418 */
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-5);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--color-4);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #fff 0%, var(--color-1) 100%);
+    text-align: center;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--color-4);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-5);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-6);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 2px solid var(--color-5);
+    color: var(--color-5);
+    margin-left: 15px;
+}
+
+/* ==========================================================================
+   MÓDULO TELEVISÃO (VÍDEO)
+   ========================================================================== */
+.video-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.video-frame {
+    background: #333;
+    padding: 15px;
+    border-radius: 20px;
+    border: 8px solid var(--color-5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    position: relative;
+    aspect-ratio: 16 / 9;
+}
+
+.video-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 40px;
+    background: var(--color-6);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SIMULADOR (QUIZ)
+   ========================================================================== */
+.quiz-container {
+    background: var(--bg-white);
+    border: 2px solid var(--color-1);
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.quiz-btn {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 2px solid var(--color-1);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.quiz-btn-safe:hover { background-color: #e8f5e9; border-color: #4caf50; }
+.quiz-btn-danger:hover { background-color: #ffebee; border-color: #f44336; }
+
+.hidden { display: none; }
+
+/* ==========================================================================
+   ABAS EDUCATIVAS
+   ========================================================================== */
+.edu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.edu-tab {
+    padding: 12px 25px;
+    border: none;
+    background: var(--color-1);
+    color: var(--color-6);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edu-tab.active {
+    background: var(--color-5);
+    color: white;
+}
+
+.edu-panel {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.edu-panel.active { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   EQUIPE
+   ========================================================================== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.team-card {
+    background: var(--color-1);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.team-card:hover { transform: translateY(-5px); background: var(--color-2); }
+
+.team-avatar { font-size: 3rem; margin-bottom: 15px; }
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.site-footer {
+    background: var(--color-6);
+    color: white;
+    padding: 40px 0;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.footer-brand { font-size: 1.8rem; margin-bottom: 30px; }
+/* ==========================================================================
+   ESPAÇAMENTO GLOBAL DE SEÇÕES
+   ========================================================================== */
+
+/* Aumentando o respiro entre as grandes seções do site */
+.section {
+    padding: 120px 0; /* Aumentado de 80px para 120px */
+    border-bottom: 1px solid var(--color-1); /* Linha sutil para separar visualmente */
+}
+
+/* Garante que a última seção não tenha borda */
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Espaçamento extra para o cabeçalho das seções */
+.section-header {
+    margin-bottom: 80px; /* Mais espaço antes de começar o conteúdo (vídeo, quiz, etc) */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* ==========================================================================
+   ESPAÇAMENTO ESPECÍFICO
+   ========================================================================== */
+
+/* Seção de Vídeo (Televisão) */
+.section-video {
+    background-color: #fcfaf8; /* Um tom quase branco para diferenciar da hero */
+}
+
+.video-wrapper {
+    margin-top: 60px;
+    padding-bottom: 40px; /* Espaço para o "pé" da TV não ficar colado */
+}
+
+/* Seção do Simulador (Quiz) */
+.section-quiz {
+    background-color: var(--bg-white);
+}
+
+.quiz-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08); /* Sombra para dar profundidade */
+}
+
+/* Seção de Conteúdo Educativo (Abas) */
+.section-educativo {
+    background-color: #f9f6f3;
+}
+
+.edu-tabs {
+    margin-bottom: 60px; /* Mais espaço entre os botões e o texto explicativo */
+    gap: 20px; /* Mais distância entre os botões das abas */
+}
+
+/* Seção da Equipe */
+.section-equipe {
+    background-color: var(--bg-white);
+}
+
+.team-grid {
+    gap: 40px; /* Aumenta o espaço entre os cartões dos integrantes */
+    margin-top: 60px;
+}
+
+/* Seção de Justificativa Acadêmica */
+.section-justificativa {
+    padding: 100px 0;
+}
+
+.justificativa-card {
+    padding: 60px; /* Mais espaço interno no texto da justificativa */
+    border-radius: 30px;
+    background: linear-gradient(to bottom right, var(--bg-white), var(--color-1));
+}
+
+/* ==========================================================================
+   AJUSTE RESPONSIVO
+   ========================================================================== */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0; /* No celular o espaço é um pouco menor para não exigir tanto scroll */
+    }
+    
+    .video-wrapper {
+        grid-template-columns: 1fr; /* No celular, o texto vai para baixo do vídeo */
+        gap: 60px;
+    }
+}/* 1. Prepara o corpo da página para se comportar como uma coluna flexível */
+html, body {
+    height: 100%; /* Garante que o navegador entenda a altura total */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* O site terá no mínimo a altura da tela do usuário */
+}
+
+/* 2. O 'main' será o elemento que cresce para ocupar o espaço vazio */
+#main-content {
+    flex: 1 0 auto; /* Isso "estica" o conteúdo principal, empurrando o footer para baixo */
+}
+
+/* 3. O rodapé agora ficará sempre na base, sem margens que causem vãos */
+.site-footer {
+    flex-shrink: 0; /* Impede que o rodapé seja espremido */
+    background-color: #311418; /* Sua cor vinho */
+    color: #FFFFFF;
+    padding: 60px 0;
+    margin-top: 0; /* Importante: remove margens externas */
+    width: 100%;
+}
+
+/* 4. Remova margens da última seção antes do footer para evitar vácuos */
+.section-justificativa {
+    margin-bottom: 0 !important;
+    padding-bottom: 100px;
+}
+.site-header {
+    /* Cores baseadas na sua paleta */
+    background-color: rgba(255, 255, 255, 0.98); 
+    border-bottom: 2px solid var(--color-1); /* #D6C7B8 para combinar com o tema */
+    
+    /* ESSENCIAIS PARA O CABEÇALHO NÃO SUMIR */
+    position: fixed; /* 'fixed' é mais estável que 'sticky' para o que você quer */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Valor altíssimo para garantir que fique sobre o simulador e vídeos */
+    
+    height: 80px; /* Altura definida para facilitar o ajuste do conteúdo abaixo */
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* 2. COMPENSAÇÃO DE ESPAÇO */
+/* Como o header agora está "fixo", ele flutua. 
+   Precisamos empurrar o resto do site para baixo para não cobrir o Hero */
+body {
+    padding-top: 80px; /* Deve ser a mesma altura do seu .site-header */
+}
+
+/* 3. AJUSTE DE ÂNCORAS */
+/* Para que ao clicar no menu, o título da seção não fique "atrás" do menu */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Altura do header + um respiro */
+}
+
+/* 4. REFINAMENTO VISUAL AO ROLAR */
+/* Adiciona uma sombra elegante quando o usuário sai do topo */
+.header-scrolled {
+    box-shadow: 0 4px 15px rgba(49, 20, 24, 0.1); /* Sombra na cor #311418 bem suave */
+    height: 70px; /* Ele diminui um pouquinho para dar mais espaço de tela */
+}
+/* ==========================================================================
+   ESPAÇAMENTO DOS LINKS DO CABEÇALHO
+   ========================================================================== */
+
+/* 1. Aumenta a distância entre os itens da lista */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 45px; /* Aumentado para 45px para dar bastante espaço entre as palavras */
+    align-items: center;
+}
+
+/* 2. Dá uma "área de clique" maior para cada palavra */
+.nav-link {
+    text-decoration: none;
+    color: var(--color-5);
+    font-weight: 600;
+    font-size: 1.1rem; /* Um pouco maior para facilitar a leitura */
+    padding: 10px 15px; /* Espaço interno para o mouse/dedo clicar com facilidade */
+    transition: var(--transition);
+    border-radius: 8px; /* Arredondado suave para o efeito de hover */
+}
+
+/* 3. Feedback visual quando passa o mouse (opcional, fica bem moderno) */
+.nav-link:hover {
+    color: var(--color-6);
+    background-color: rgba(214, 199, 184, 0.3); /* Usa a cor #D6C7B8 clarinha no fundo */
+}
+
+/* 4. Ajuste da Logo para não ficar grudada no menu */
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; /* Mais espaço nas laterais do cabeçalho inteiro */
+}
+@media (max-width: 992px) {
+    .main-nav ul {
+        gap: 25px; /* Diminui um pouco o espaço em telas médias para não quebrar a linha */
+    }
+    
+    .logo-text {
+        font-size: 1.2rem; /* Diminui um pouco a logo se necessário */
+    }
+}
+.logo-text strong {
+    color: var(--color-4); /* Usando o Terracota #8A5B59 para destacar o 'Seguro Digital' */
+    font-weight: 900;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+}
+/* Aplicar essa classe em todas as telas do quiz para transições bonitas */
+.quiz-screen {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

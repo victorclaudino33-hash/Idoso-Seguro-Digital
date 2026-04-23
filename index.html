@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Idoso Seguro Digital — Conscientização e Proteção Online</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== CABEÇALHO / NAV ===================== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner container">
+      <div class="logo" aria-label="Idoso Seguro Digital">
+        <span class="logo-icon" aria-hidden="true">🛡️</span>
+        <span class="logo-text">Idoso <strong>Seguro Digital</strong></span>
+      </div>
+      <nav class="main-nav" role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="#video" class="nav-link">📹 Vídeo</a></li>
+          <li><a href="#simulador" class="nav-link">🎮 Simulador</a></li>
+          <li><a href="#educativo" class="nav-link">📚 Conteúdo</a></li>
+          <li><a href="#equipe" class="nav-link">👥 Equipe</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-label="Apresentação do projeto">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-shape shape-1"></div>
+        <div class="hero-shape shape-2"></div>
+        <div class="hero-shape shape-3"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-badge">Projeto Educacional</div>
+        <h1 class="hero-title">
+          Proteja-se no<br />
+          <span class="highlight">Mundo Digital</span>
+        </h1>
+        <p class="hero-subtitle">
+          Um guia prático e interativo para idosos aprenderem a identificar
+          golpes, notícias falsas e manipulações online — com segurança e confiança.
+        </p>
+        <div class="hero-cta">
+          <a href="#simulador" class="btn btn-primary">
+            🎮 Jogar o Simulador
+          </a>
+          <a href="#educativo" class="btn btn-outline">
+            📚 Aprender Mais
+          </a>
+        </div>
+        <div class="hero-stats" aria-label="Estatísticas do projeto">
+          <div class="stat">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Temas Abordados</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Integrantes</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">10</span>
+            <span class="stat-label">Cenários no Quiz</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SEÇÃO VÍDEO ===================== -->
+    <section id="video" class="section section-video" aria-label="Vídeo do projeto">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">🎬 Apresentação</span>
+          <h2 class="section-title">Conheça o Projeto</h2>
+          <p class="section-desc">
+            Assista ao vídeo para entender nossa proposta e como podemos ajudar
+            idosos a navegar com mais segurança no ambiente digital.
+          </p>
+        </div>
+        <div class="video-wrapper">
+          <div class="video-frame">
+            <!-- SUBSTITUA o src pelo link do seu vídeo MP4 ou embed do YouTube -->
+            <div class="video-placeholder" id="videoPlaceholder" role="img" aria-label="Área do vídeo do projeto">
+              <div class="play-btn" id="playBtn" tabindex="0" role="button" aria-label="Reproduzir vídeo">
+                <span class="play-icon" aria-hidden="true">▶</span>
+              </div>
+              <p class="video-hint">Clique para assistir ao vídeo</p>
+              <p class="video-sub-hint">
+                <!-- Para inserir seu vídeo MP4, substitua o conteúdo desta div por:<br> -->
+                <!-- <video controls src="seu-video.mp4"></video> -->
+                <!-- Ou para YouTube: <iframe src="https://www.youtube.com/embed/SEU_ID"></iframe> -->
+                📁 Insira aqui o link do seu vídeo MP4 ou YouTube
+              </p>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>O que você vai aprender</h3>
+            <ul class="video-topics">
+              <li>
+                <span class="topic-icon">🎯</span>
+                <div>
+                  <strong>Objetivo do Projeto</strong>
+                  <p>Por que criamos esse site e quem ele quer alcançar</p>
+                </div>
+              </li>
+              <li>
+                <span class="topic-icon">⚠️</span>
+                <div>
+                  <strong>Principais Riscos</strong>
+                  <p>Golpes, fake news e manipulação emocional explicados</p>
+                </div>
+              </li>
+              <li>
+                <span class="topic-icon">🛡️</span>
+                <div>
+                  <strong>Como se Proteger</strong>
+                  <p>Dicas práticas e simples para o dia a dia digital</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SIMULADOR ===================== -->
+    <section id="simulador" class="section section-quiz" aria-label="Simulador interativo de golpes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">🎮 Simulador</span>
+          <h2 class="section-title">Teste Seus Conhecimentos</h2>
+          <p class="section-desc">
+            Analise situações reais e descubra se você consegue identificar
+            mensagens perigosas. Aprenda fazendo!
+          </p>
+        </div>
+
+        <!-- QUIZ CONTAINER -->
+        <div class="quiz-container" role="main" aria-live="polite">
+
+          <!-- TELA INICIAL -->
+          <div class="quiz-screen" id="quizStart">
+            <div class="quiz-start-content">
+              <div class="quiz-icon" aria-hidden="true">🕵️</div>
+              <h3>Bem-vindo ao Simulador de Golpes!</h3>
+              <p>Você vai analisar <strong>10 situações reais</strong> e decidir se são confiáveis ou suspeitas.</p>
+              <ul class="quiz-rules">
+                <li>📱 Leia cada mensagem com atenção</li>
+                <li>🤔 Pense antes de responder</li>
+                <li>📖 Após cada resposta, explicamos o motivo</li>
+                <li>🏆 No final, veja sua pontuação!</li>
+              </ul>
+              <button class="btn btn-primary btn-large" id="startQuizBtn">
+                Começar Agora →
+              </button>
+            </div>
+          </div>
+
+          <!-- TELA DA PERGUNTA -->
+          <div class="quiz-screen hidden" id="quizQuestion">
+            <div class="quiz-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="10">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="quiz-progress-text">
+              Pergunta <span id="currentQ">1</span> de <span id="totalQ">10</span>
+            </div>
+
+            <div class="quiz-scenario">
+              <div class="scenario-device" id="scenarioDevice" aria-label="Mensagem recebida">
+                <div class="device-header" id="deviceHeader"></div>
+                <div class="device-body" id="deviceBody"></div>
+              </div>
+            </div>
+
+            <div class="quiz-question-text" id="questionText"></div>
+
+            <div class="quiz-options" role="group" aria-label="Escolha uma opção">
+              <button class="quiz-btn quiz-btn-safe" id="btnSafe" aria-label="Esta mensagem é confiável">
+                ✅ Confiável
+              </button>
+              <button class="quiz-btn quiz-btn-danger" id="btnDanger" aria-label="Esta mensagem é suspeita">
+                🚩 Suspeito
+              </button>
+            </div>
+          </div>
+
+          <!-- TELA DE FEEDBACK -->
+          <div class="quiz-screen hidden" id="quizFeedback">
+            <div class="feedback-icon" id="feedbackIcon" aria-hidden="true"></div>
+            <div class="feedback-result" id="feedbackResult"></div>
+            <div class="feedback-text" id="feedbackText"></div>
+            <div class="feedback-tip" id="feedbackTip">
+              <span class="tip-label">💡 Dica:</span>
+              <span id="feedbackTipText"></span>
+            </div>
+            <button class="btn btn-primary" id="nextQuestionBtn">
+              Próxima Pergunta →
+            </button>
+          </div>
+
+          <!-- TELA DE RESULTADO FINAL -->
+          <div class="quiz-screen hidden" id="quizResult">
+            <div class="result-trophy" aria-hidden="true">🏆</div>
+            <h3 class="result-title">Simulação Concluída!</h3>
+            <div class="result-score">
+              <span id="finalScore">0</span>
+              <span class="result-total">/ 10</span>
+            </div>
+            <div class="result-level" id="resultLevel"></div>
+            <div class="result-bar-wrap" role="progressbar" aria-label="Sua pontuação">
+              <div class="result-bar" id="resultBar"></div>
+            </div>
+            <div class="result-tips" id="resultTips"></div>
+            <button class="btn btn-primary btn-large" id="restartQuizBtn">
+              🔄 Jogar Novamente
+            </button>
+          </div>
+
+        </div><!-- /quiz-container -->
+      </div>
+    </section>
+
+    <!-- ===================== CONTEÚDO EDUCATIVO ===================== -->
+    <section id="educativo" class="section section-educativo" aria-label="Conteúdo educativo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">📚 Aprendizado</span>
+          <h2 class="section-title">Temas Importantes</h2>
+          <p class="section-desc">
+            Entenda os principais riscos do mundo digital e saiba como se proteger.
+          </p>
+        </div>
+
+        <div class="edu-tabs" role="tablist" aria-label="Temas educativos">
+          <button class="edu-tab active" role="tab" aria-selected="true" aria-controls="tab-fakenews" id="btn-fakenews" data-tab="fakenews">
+            🧠 Fake News
+          </button>
+          <button class="edu-tab" role="tab" aria-selected="false" aria-controls="tab-eleicoes" id="btn-eleicoes" data-tab="eleicoes">
+            🗳️ Eleições
+          </button>
+          <button class="edu-tab" role="tab" aria-selected="false" aria-controls="tab-religiao" id="btn-religiao" data-tab="religiao">
+            ✝️ Manipulação
+          </button>
+          <button class="edu-tab" role="tab" aria-selected="false" aria-controls="tab-ia" id="btn-ia" data-tab="ia">
+            🤖 I.A. e Deepfake
+          </button>
+        </div>
+
+        <!-- FAKE NEWS -->
+        <div class="edu-panel active" id="tab-fakenews" role="tabpanel" aria-labelledby="btn-fakenews">
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <span class="edu-icon" aria-hidden="true">🧠</span>
+              <div>
+                <h3>Fake News e Idosos na Atualidade</h3>
+                <p class="edu-subtitle">Por que idosos são mais vulneráveis à desinformação?</p>
+              </div>
+            </div>
+            <div class="edu-body">
+              <div class="edu-block">
+                <h4>📌 O que são Fake News?</h4>
+                <p>
+                  Fake news são notícias inventadas ou distorcidas, criadas para enganar
+                  as pessoas. Elas se espalham rapidamente pelo WhatsApp, Facebook e
+                  outras redes sociais — muitas vezes por pessoas bem-intencionadas
+                  que não verificaram a informação antes de compartilhar.
+                </p>
+              </div>
+              <div class="edu-block">
+                <h4>❓ Por que elas se espalham?</h4>
+                <ul class="edu-list">
+                  <li>🔴 Causam medo, raiva ou surpresa — emoções fortes fazem as pessoas compartilharem</li>
+                  <li>🔴 Parecem verdadeiras (usam logotipos de jornais, fotos reais editadas)</li>
+                  <li>🔴 Chegam de pessoas conhecidas, o que aumenta a confiança</li>
+                  <li>🔴 São escritas de forma simples e chamativa</li>
+                </ul>
+              </div>
+              <div class="edu-example">
+                <span class="example-label">📱 Exemplo real</span>
+                <div class="fake-message">
+                  <p>"⚠️ URGENTE! O governo vai bloquear todas as aposentadorias em 48 horas! Compartilhe antes que apaguem!"</p>
+                </div>
+                <p class="example-explain">
+                  <strong>Por que é falsa?</strong> Usa urgência, medo e pede compartilhamento apressado.
+                  Nenhum governo anuncia isso por WhatsApp.
+                </p>
+              </div>
+              <div class="edu-tip">
+                <span class="tip-icon" aria-hidden="true">💡</span>
+                <div>
+                  <strong>Dica Prática:</strong>
+                  <p>Antes de compartilhar qualquer notícia, pergunte-se: <em>"Eu vi isso num jornal de verdade?"</em> Se não, não compartilhe. Verifique no Google ou em sites como <strong>Agência Lupa</strong> e <strong>Aos Fatos</strong>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ELEIÇÕES -->
+        <div class="edu-panel" id="tab-eleicoes" role="tabpanel" aria-labelledby="btn-eleicoes">
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <span class="edu-icon" aria-hidden="true">🗳️</span>
+              <div>
+                <h3>Idosos e Eleições</h3>
+                <p class="edu-subtitle">Como a desinformação afeta o voto?</p>
+              </div>
+            </div>
+            <div class="edu-body">
+              <div class="edu-block">
+                <h4>📌 Manipulação Política nas Redes Sociais</h4>
+                <p>
+                  Em períodos eleitorais, circulam muitas mensagens falsas sobre candidatos,
+                  partidos e regras eleitorais. Essas mensagens usam medo, raiva e mentiras
+                  para influenciar o voto das pessoas — especialmente em grupos de WhatsApp.
+                </p>
+              </div>
+              <div class="edu-block">
+                <h4>⚠️ Sinais de Alerta</h4>
+                <ul class="edu-list">
+                  <li>🔴 Mensagens que falam "vote contra X ou o Brasil vai acabar"</li>
+                  <li>🔴 Vídeos ou fotos de candidatos em situações que parecem absurdas</li>
+                  <li>🔴 Correntes pedindo que você vote em alguém "para salvar o país"</li>
+                  <li>🔴 Notícias de que a urna eletrônica é fraudada (sem prova nenhuma)</li>
+                </ul>
+              </div>
+              <div class="edu-example">
+                <span class="example-label">📱 Exemplo de mensagem falsa</span>
+                <div class="fake-message">
+                  <p>"🚨 Confirmado! O candidato X foi preso hoje por corrupção. Compartilhe para todos saberem antes das eleições!"</p>
+                </div>
+                <p class="example-explain">
+                  <strong>Como identificar:</strong> Se fosse verdade, estaria nos principais jornais do Brasil. Sempre consulte fontes oficiais.
+                </p>
+              </div>
+              <div class="edu-tip">
+                <span class="tip-icon" aria-hidden="true">💡</span>
+                <div>
+                  <strong>O que fazer:</strong>
+                  <p>Consulte o site do <strong>Tribunal Superior Eleitoral (tse.jus.br)</strong> para informações oficiais sobre eleições. Desconfie de correntes no WhatsApp sobre políticos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RELIGIÃO -->
+        <div class="edu-panel" id="tab-religiao" role="tabpanel" aria-labelledby="btn-religiao">
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <span class="edu-icon" aria-hidden="true">✝️</span>
+              <div>
+                <h3>Manipulação Emocional</h3>
+                <p class="edu-subtitle">Quando a fé é usada para enganar</p>
+              </div>
+            </div>
+            <div class="edu-body">
+              <div class="edu-block edu-alert-block">
+                <p>
+                  <strong>Importante:</strong> Este tema não critica nenhuma religião.
+                  Toda religião é válida e respeitada. O que abordamos aqui é o uso indevido
+                  de mensagens religiosas para <em>manipular emocionalmente</em> as pessoas.
+                </p>
+              </div>
+              <div class="edu-block">
+                <h4>📌 O que é Manipulação Emocional?</h4>
+                <p>
+                  Mensagens que usam a fé das pessoas para gerar medo, culpa ou obrigação.
+                  Elas apelam para sentimentos profundos e pressionam o compartilhamento
+                  através de ameaças ou promessas falsas.
+                </p>
+              </div>
+              <div class="edu-block">
+                <h4>⚠️ Tipos mais comuns</h4>
+                <ul class="edu-list">
+                  <li>🔴 <strong>Correntes de benção/maldição:</strong> "Compartilhe ou algo ruim acontecerá"</li>
+                  <li>🔴 <strong>Golpes de doação religiosa:</strong> Falsas instituições pedindo dinheiro em nome de Deus</li>
+                  <li>🔴 <strong>Curas milagrosas falsas:</strong> Produtos vendidos como "abençoados" que curam doenças</li>
+                  <li>🔴 <strong>Apelos ao medo:</strong> "Você vai para o inferno se não fizer isso"</li>
+                </ul>
+              </div>
+              <div class="edu-example">
+                <span class="example-label">📱 Exemplo de mensagem manipuladora</span>
+                <div class="fake-message">
+                  <p>"🙏 Deus me pediu para enviar essa mensagem. Se você acredita nEle, compartilhe para 10 pessoas AGORA. Quem não compartilhar vai sofrer consequências. Amém."</p>
+                </div>
+                <p class="example-explain">
+                  <strong>Por que é manipulação:</strong> Usa a fé para criar obrigação e medo. Nenhuma divindade envia mensagens pelo WhatsApp.
+                </p>
+              </div>
+              <div class="edu-tip">
+                <span class="tip-icon" aria-hidden="true">💡</span>
+                <div>
+                  <strong>Lembre-se:</strong>
+                  <p>Sua fé é sua. Ninguém tem o direito de usá-la para te pressionar ou assustar. Se uma mensagem causa medo ou culpa, <strong>não compartilhe</strong>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IA E DEEPFAKE -->
+        <div class="edu-panel" id="tab-ia" role="tabpanel" aria-labelledby="btn-ia">
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <span class="edu-icon" aria-hidden="true">🤖</span>
+              <div>
+                <h3>Inteligência Artificial e Deepfakes</h3>
+                <p class="edu-subtitle">Quando o que você vê não é real</p>
+              </div>
+            </div>
+            <div class="edu-body">
+              <div class="edu-block">
+                <h4>📌 O que é Inteligência Artificial (I.A.)?</h4>
+                <p>
+                  A Inteligência Artificial é uma tecnologia que aprende com informações e
+                  consegue criar textos, imagens, áudios e vídeos que parecem reais — mas
+                  são completamente fabricados por computador.
+                </p>
+              </div>
+              <div class="edu-block">
+                <h4>😱 O que são Deepfakes?</h4>
+                <p>
+                  Deepfakes são vídeos ou áudios falsos criados por I.A. onde o rosto ou
+                  a voz de uma pessoa real é colocada em situações que nunca aconteceram.
+                  Políticos, artistas e até pessoas comuns já foram vítimas.
+                </p>
+              </div>
+              <div class="edu-block">
+                <h4>⚠️ Como identificar conteúdo falso de I.A.</h4>
+                <ul class="edu-list">
+                  <li>🔴 Movimentos de lábios que não combinam com o áudio</li>
+                  <li>🔴 Olhos que piscam de forma estranha ou não piscam</li>
+                  <li>🔴 Bordas da cabeça/cabelo com aspecto borrado ou irreal</li>
+                  <li>🔴 A voz parece "robótica" ou levemente fora do tom</li>
+                  <li>🔴 O conteúdo do vídeo parece impossível ou absurdo</li>
+                </ul>
+              </div>
+              <div class="edu-example">
+                <span class="example-label">⚠️ Golpe com deepfake</span>
+                <div class="fake-message">
+                  <p>"Vídeo do Presidente anunciando que toda aposentadoria vai dobrar em fevereiro — mas ninguém avisou!" [vídeo falso criado por I.A.]</p>
+                </div>
+                <p class="example-explain">
+                  <strong>Realidade:</strong> Esse vídeo foi gerado por computador. O Presidente nunca disse isso. Procure a notícia em jornais confiáveis.
+                </p>
+              </div>
+              <div class="edu-tip">
+                <span class="tip-icon" aria-hidden="true">💡</span>
+                <div>
+                  <strong>Regra de ouro:</strong>
+                  <p>Se um vídeo parece bom demais para ser verdade, ou mostra algo chocante que você nunca viu nos jornais, <strong>desconfie sempre</strong>. Procure a informação em fontes confiáveis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== EQUIPE ===================== -->
+    <section id="equipe" class="section section-equipe" aria-label="Equipe do projeto">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">👥 Equipe</span>
+          <h2 class="section-title">Quem Fez esse Projeto</h2>
+          <p class="section-desc">
+            Conheça os integrantes responsáveis por criar esse site educacional.
+          </p>
+        </div>
+
+        <div class="team-grid" role="list">
+
+          <!-- Integrante 1 -->
+          <article class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">👤</div>
+            <div class="team-info">
+              <h3 class="team-name">Nome do Integrante 1</h3>
+              <span class="team-role">Desenvolvimento Web</span>
+              <p class="team-desc">Responsável pela criação do site, estrutura HTML/CSS e JavaScript.</p>
+            </div>
+          </article>
+
+          <!-- Integrante 2 -->
+          <article class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">👤</div>
+            <div class="team-info">
+              <h3 class="team-name">Nome do Integrante 2</h3>
+              <span class="team-role">Simulador Interativo</span>
+              <p class="team-desc">Criou e desenvolveu os cenários e a lógica do quiz educativo.</p>
+            </div>
+          </article>
+
+          <!-- Integrante 3 -->
+          <article class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">👤</div>
+            <div class="team-info">
+              <h3 class="team-name">Nome do Integrante 3</h3>
+              <span class="team-role">Pesquisa — Fake News</span>
+              <p class="team-desc">Pesquisou e redigiu o conteúdo educativo sobre fake news e desinformação.</p>
+            </div>
+          </article>
+
+          <!-- Integrante 4 -->
+          <article class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">👤</div>
+            <div class="team-info">
+              <h3 class="team-name">Nome do Integrante 4</h3>
+              <span class="team-role">Pesquisa — Eleições</span>
+              <p class="team-desc">Levantou dados sobre manipulação política e desinformação eleitoral.</p>
+            </div>
+          </article>
+
+          <!-- Integrante 5 -->
+          <article class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">👤</div>
+            <div class="team-info">
+              <h3 class="team-name">Nome do Integrante 5</h3>
+              <span class="team-role">Pesquisa — Manipulação Emocional</span>
+              <p class="team-desc">Elaborou o conteúdo sobre uso indevido da fé e manipulação emocional.</p>
+            </div>
+          </article>
+
+          <!-- Integrante 6 -->
+          <article class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">👤</div>
+            <div class="team-info">
+              <h3 class="team-name">Nome do Integrante 6</h3>
+              <span class="team-role">Design e Acessibilidade</span>
+              <p class="team-desc">Definiu a identidade visual e garantiu acessibilidade para o público idoso.</p>
+            </div>
+          </article>
+
+          <!-- Integrante 7 -->
+          <article class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">👤</div>
+            <div class="team-info">
+              <h3 class="team-name">Nome do Integrante 7</h3>
+              <span class="team-role">Produção do Vídeo</span>
+              <p class="team-desc">Roteirizou, gravou e editou o vídeo de apresentação do projeto.</p>
+            </div>
+          </article>
+
+          <!-- Integrante 8 -->
+          <article class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">👤</div>
+            <div class="team-info">
+              <h3 class="team-name">Nome do Integrante 8</h3>
+              <span class="team-role">I.A. e Deepfakes</span>
+              <p class="team-desc">Pesquisou e elaborou o conteúdo sobre Inteligência Artificial e deepfakes.</p>
+            </div>
+          </article>
+
+        </div><!-- /team-grid -->
+      </div>
+    </section>
+
+    <!-- ===================== JUSTIFICATIVA ===================== -->
+    <section class="section section-justificativa" aria-label="Justificativa do projeto">
+      <div class="container">
+        <div class="justificativa-card">
+          <span class="justificativa-icon" aria-hidden="true">🎓</span>
+          <h2>Justificativa Acadêmica</h2>
+          <p>
+            Este projeto foi desenvolvido com foco na <strong>conscientização de idosos sobre riscos digitais</strong>,
+            utilizando uma abordagem interativa e educativa. O simulador permite a aprendizagem prática,
+            enquanto as seções informativas abordam temas atuais como fake news, eleições,
+            manipulação emocional e inteligência artificial.
+          </p>
+          <p>
+            A escolha do público-alvo se baseia na crescente vulnerabilidade dos idosos no ambiente digital,
+            especialmente com o aumento do uso de smartphones e redes sociais nessa faixa etária.
+            O site aplica princípios de <strong>acessibilidade</strong>, <strong>gamificação</strong>
+            e <strong>linguagem acessível</strong> para maximizar o impacto educacional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon" aria-hidden="true">🛡️</span>
+        <span>Idoso <strong>Seguro Digital</strong></span>
+      </div>
+      <p class="footer-desc">Projeto educacional de conscientização digital para idosos.</p>
+      <p class="footer-copy">© 2026 — Desenvolvido com 💙 pela equipe do projeto</p>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página" title="Voltar ao topo">
+    ↑
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
